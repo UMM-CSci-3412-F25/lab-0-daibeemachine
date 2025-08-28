@@ -17,9 +17,8 @@ COMPRESSED_FILE+=/NthPrime.tgz
 cd "$(dirname "$(realpath "$0")")" || exit
 tar zxf "$COMPRESSED_FILE"
 cd "$FOLDER" || exit
-gcc main.c nth_prime.c -o program.exe
-./program.exe "$1"
+gcc main.c nth_prime.c -o NthPrime
+./NthPrime "$1"
 cd ..
-rm -rf "$FOLDER"
 cd "$WORKING_DIRECTORY" || exit
 
